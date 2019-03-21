@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f18e3d68-34c8-468a-ab05-083d7e3b5edd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestTickets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestTickets.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TicketVendors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicketVendors.java" afterDir="false" />
     </list>
@@ -20,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TestTickets.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+            <state relative-caret-position="236">
+              <caret line="77" column="39" selection-start-line="77" selection-start-column="39" selection-end-line="77" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TicketVendors.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="257">
+              <caret line="26" column="5" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="26" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,7 +121,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553014652291" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553147373456" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -145,22 +142,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestTickets.testVendorWithHugeNumberOfTickets">
+  <component name="RunManager" selected="JUnit.TestTickets.testRandomCase">
     <configuration name="TestTickets" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TicketTest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestTickets" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestTickets.testManyVendorsWithManyTickets" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TicketTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestTickets" />
-      <option name="METHOD_NAME" value="testManyVendorsWithManyTickets" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -185,6 +172,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestTickets.testRandomCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TicketTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestTickets" />
+      <option name="METHOD_NAME" value="testRandomCase" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestTickets.testVendorWithHugeNumberOfTickets" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TicketTest" />
       <option name="PACKAGE_NAME" value="" />
@@ -197,11 +194,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestTickets.testVendorWithHugeNumberOfTickets" />
+        <item itemvalue="JUnit.TestTickets.testRandomCase" />
         <item itemvalue="JUnit.TestTickets" />
         <item itemvalue="JUnit.TestTickets.testOptimizedVendors" />
+        <item itemvalue="JUnit.TestTickets.testVendorWithHugeNumberOfTickets" />
         <item itemvalue="JUnit.TestTickets.testManyVendorsWithManyTicketsFewPurchase" />
-        <item itemvalue="JUnit.TestTickets.testManyVendorsWithManyTickets" />
       </list>
     </recent_temporary>
   </component>
@@ -218,43 +215,44 @@
       <workItem from="1552880674181" duration="1634000" />
       <workItem from="1552882362191" duration="13172000" />
       <workItem from="1552961089142" duration="3357000" />
+      <workItem from="1553144445552" duration="2856000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestTickets_testOptimizedVendors - 2019.03.18 at 19h 24m 03s.xml">
-      <configuration name="TestTickets.testOptimizedVendors" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestTickets_testManyVendorsWithManyTickets - 2019.03.18 at 19h 30m 47s.xml">
-      <configuration name="TestTickets.testManyVendorsWithManyTickets" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestTickets_testManyVendorsWithManyTickets - 2019.03.18 at 19h 30m 59s.xml">
-      <configuration name="TestTickets.testManyVendorsWithManyTickets" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestTickets_testManyVendorsWithManyTicketsFewPurchase - 2019.03.18 at 19h 31m 18s.xml">
-      <configuration name="TestTickets.testManyVendorsWithManyTicketsFewPurchase" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestTickets_testOptimizedVendors - 2019.03.18 at 19h 32m 06s.xml">
-      <configuration name="TestTickets.testOptimizedVendors" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestTickets - 2019.03.18 at 19h 32m 45s.xml">
+    <history-entry file="TestTickets - 2019.03.20 at 22h 47m 51s.xml">
       <configuration name="TestTickets" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestTickets_testVendorWithHugeNumberOfTickets - 2019.03.19 at 09h 52m 31s.xml">
-      <configuration name="TestTickets.testVendorWithHugeNumberOfTickets" configurationId="JUnit" />
+    <history-entry file="TestTickets_testRandomCase - 2019.03.20 at 22h 48m 14s.xml">
+      <configuration name="TestTickets.testRandomCase" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestTickets_testVendorWithHugeNumberOfTickets - 2019.03.19 at 09h 53m 40s.xml">
-      <configuration name="TestTickets.testVendorWithHugeNumberOfTickets" configurationId="JUnit" />
+    <history-entry file="TestTickets_testRandomCase - 2019.03.20 at 22h 48m 20s.xml">
+      <configuration name="TestTickets.testRandomCase" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestTickets_testVendorWithHugeNumberOfTickets - 2019.03.19 at 09h 54m 25s.xml">
-      <configuration name="TestTickets.testVendorWithHugeNumberOfTickets" configurationId="JUnit" />
+    <history-entry file="TestTickets_testRandomCase - 2019.03.20 at 22h 48m 24s.xml">
+      <configuration name="TestTickets.testRandomCase" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestTickets_testVendorWithHugeNumberOfTickets - 2019.03.19 at 09h 57m 30s.xml">
-      <configuration name="TestTickets.testVendorWithHugeNumberOfTickets" configurationId="JUnit" />
+    <history-entry file="TestTickets_testRandomCase - 2019.03.20 at 22h 48m 29s.xml">
+      <configuration name="TestTickets.testRandomCase" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestTickets_testRandomCase - 2019.03.20 at 22h 48m 32s.xml">
+      <configuration name="TestTickets.testRandomCase" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestTickets_testRandomCase - 2019.03.20 at 22h 48m 35s.xml">
+      <configuration name="TestTickets.testRandomCase" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestTickets_testRandomCase - 2019.03.20 at 22h 48m 39s.xml">
+      <configuration name="TestTickets.testRandomCase" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestTickets_testRandomCase - 2019.03.20 at 22h 48m 55s.xml">
+      <configuration name="TestTickets.testRandomCase" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestTickets_testRandomCase - 2019.03.20 at 22h 49m 02s.xml">
+      <configuration name="TestTickets.testRandomCase" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18163000" />
+    <option name="totallyTimeSpent" value="21019000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
@@ -269,7 +267,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.329927" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329927" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -326,8 +324,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TicketVendors.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="257">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="26" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -336,8 +334,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TestTickets.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+        <state relative-caret-position="236">
+          <caret line="77" column="39" selection-start-line="77" selection-start-column="39" selection-end-line="77" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -4,58 +4,23 @@ import java.util.Map;
 
 public class TicketVendors {
 
-    public static long solve(int[] vendors, int n) {
-        int minPrice = 1;
-        int maxPrice = 0;
-        Arrays.sort(vendors);
-        for (int i = 0, j = vendors.length - 1; i < j; i++, j--) {
-            int tmp = vendors[i];
-            vendors[i] = vendors[j];
-            vendors[j] = tmp;
-        }
-        for (int vendor : vendors) {
-            maxPrice = Math.max(maxPrice, vendor);
-        }
-        int[] purchases = new int[maxPrice + 1];
-        for (int vendor : vendors) {
-            for (int price = vendor; price >= minPrice; price--) {
-                purchases[price]++;
-                if (n > 0) {
-                    n--;
-                } else {
-                    if (purchases[minPrice] == 0) minPrice = price;
-                    purchases[minPrice]--;
-                    if (purchases[minPrice] == 0) minPrice++;
-                }
-            }
-        }
-        long result = 0;
-        for (int price = minPrice; price <= maxPrice; price++) {
-            result += purchases[price] * price;
-        }
-        return result;
-    }
+    public static int solve(int[] vendors, int k) {
 
-    public static long solve2(int[] vendors, int k) {
-
+        Map<Integer, Integer> quants = new HashMap<>();
         int max = 0;
         for (int i : vendors) {
+            quants.put(i, quants.getOrDefault(i, 0) + 1);
             max = Math.max(i, max);
         }
 
-        int[] quants = new int[max + 1];
-
-        for (int i: vendors) {
-            quants[i]++;
-        }
-
-        long result = 0L;
+        int result = 0;
 
         for (int i = 0; i < k; i++) {
-            quants[max]--;
-            quants[max - 1]++;
+            int valueAfterUpdate = quants.get(max) - 1;
+            quants.put(max, valueAfterUpdate);
+            quants.put(max - 1, quants.getOrDefault(max - 1, 0) + 1);
             result += max;
-            if (quants[max] <= 0) max--;
+            if (valueAfterUpdate == 0) max--;
         }
 
         return result;

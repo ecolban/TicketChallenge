@@ -3,6 +3,10 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ThreadLocalRandom;
+
 /*
  *
  * Several ticket vendors are selling their tickets at the fair.
@@ -18,53 +22,72 @@ import org.junit.Test;
 public class TestTickets {
 
     @Test
-    public void testASimpleInstance() {
+    public void testSimpleCase() {
         int[] vendors = {3, 4, 8, 6, 8, 9};
-        assertEquals(40, TicketVendors.solve2(vendors, 5));
+        assertEquals(40, TicketVendors.solve(vendors, 5));
     }
 
     @Test
-    public void testAnotherSimpleInstance() {
+    public void testAnotherSimpleCase() {
         int[] vendors = {3, 4, 8, 6, 8, 9, 9, 0, 3, 4, 5};
-        System.out.println(TicketVendors.solve(vendors, 10));
-        assertEquals(78, TicketVendors.solve2(vendors, 10));
-    }
-
-    @Test//(timeout = 45)
-    public void testOptimizedVendors() {
-        long time = System.currentTimeMillis();
-        int[] vendors = {3, 4, 8, 6, 8, 9, 100, 0, 3, 4, 1000007, 1000, 300, 3000, 300, 40050, 60000, 6000};
-        assertEquals("Input does not match", 95007050028L, TicketVendors.solve2(vendors, 100007));
-//        assertEquals("Input does not match", 517769516, TicketVendors.solve2(vendors, 100007));
-        System.out.println((System.currentTimeMillis() - time));
+        assertEquals(78, TicketVendors.solve(vendors, 10));
     }
 
     @Test(timeout = 20)
-    public void testManyVendorsWithManyTickets() {
+    public void testSeveralVendorsOneWithManyTicketsLargePurchase() {
+        long startTime = System.currentTimeMillis();
+        int[] vendors = {3, 4, 8, 6, 8, 9, 100, 0, 3, 4, 1000007, 1000, 300, 3000, 300, 40050, 60000, 6000};
+        assertEquals(1006500528, TicketVendors.solve(vendors, 1007));
+        System.out.println((System.currentTimeMillis() - startTime));
+    }
+
+    @Test(timeout = 20)
+    public void testManyVendorsWithManyTicketsLargePurchase() {
         int[] vendors = new int[1000];
         for (int i = 0; i < vendors.length; i++) {
             vendors[i] = (i + 1) * 1000;
         }
         long startTime = System.currentTimeMillis();
-        assertEquals("Input does not match", 999500500, TicketVendors.solve2(vendors, 1000));
+        assertEquals(999500500, TicketVendors.solve(vendors, 1000));
         System.out.println((System.currentTimeMillis() - startTime));
     }
 
     @Test(timeout = 20)
-    public void testManyVendorsWithManyTicketsFewPurchase() {
+    public void testManyVendorsWithManyTicketsFewPurchases() {
         int[] vendors = new int[10000];
         for (int i = 0; i < vendors.length; i++) {
             vendors[i] = 1000000;
         }
         long startTime = System.currentTimeMillis();
-        assertEquals("Input does not match", 2000000, TicketVendors.solve2(vendors, 2));
+        assertEquals(2000000, TicketVendors.solve(vendors, 2));
         System.out.println((System.currentTimeMillis() - startTime));
     }
 
-    @Test
+    @Test(timeout = 20)
     public void testVendorWithHugeNumberOfTickets() {
-        int huge = Integer.MAX_VALUE >> 1;
-        int[] vendors = {huge};
-        assertEquals(huge, TicketVendors.solve2(vendors, 1));
+        int[] vendors = {Integer.MAX_VALUE};
+        assertEquals(Integer.MAX_VALUE, TicketVendors.solve(vendors, 1));
+    }
+
+    @Test
+    public void testRandomCase() {
+
+        ThreadLocalRandom rng = ThreadLocalRandom.current();
+        int[] vendors = new int[rng.nextInt(1000)];
+        for (int i = 0; i < vendors.length; i++) {
+            vendors[i] = rng.nextInt(1000);
+        }
+        int k = rng.nextInt(1000);
+        int expected = hiddenSolve(vendors, k);
+        System.out.println(expected);
+        assertEquals(expected, TicketVendors.solve(vendors, k));
+
+    }
+
+    private int hiddenSolve(int[] vendors, int k) {
+
+        //TODO: The code for the solution goes here.
+
+        return 0;
     }
 }
