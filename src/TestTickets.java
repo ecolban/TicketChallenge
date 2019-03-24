@@ -79,15 +79,30 @@ public class TestTickets {
         }
         int k = rng.nextInt(1000);
         int expected = hiddenSolve(vendors, k);
-        System.out.println(expected);
+//        System.out.println(expected);
         assertEquals(expected, TicketVendors.solve(vendors, k));
 
     }
 
     private int hiddenSolve(int[] vendors, int k) {
 
-        //TODO: The code for the solution goes here.
+        Map<Integer, Integer> quants = new HashMap<>();
+        int max = 0;
+        for (int i : vendors) {
+            quants.put(i, quants.getOrDefault(i, 0) + 1);
+            max = Math.max(i, max);
+        }
 
-        return 0;
+        int result = 0;
+
+        for (int i = 0; i < k; i++) {
+            int valueAfterUpdate = quants.get(max) - 1;
+            quants.put(max, valueAfterUpdate);
+            quants.put(max - 1, quants.getOrDefault(max - 1, 0) + 1);
+            result += max;
+            if (valueAfterUpdate == 0) max--;
+        }
+
+        return result;
     }
 }
