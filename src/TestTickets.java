@@ -1,5 +1,4 @@
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -35,21 +34,17 @@ public class TestTickets {
 
     @Test(timeout = 20)
     public void testSeveralVendorsOneWithManyTicketsLargePurchase() {
-        long startTime = System.currentTimeMillis();
         int[] vendors = {3, 4, 8, 6, 8, 9, 100, 0, 3, 4, 1000007, 1000, 300, 3000, 300, 40050, 60000, 6000};
         assertEquals(1006500528, TicketVendors.solve(vendors, 1007));
-        System.out.println((System.currentTimeMillis() - startTime));
     }
 
-    @Test(timeout = 20)
+    @Test//(timeout = 20)
     public void testManyVendorsWithManyTicketsLargePurchase() {
         int[] vendors = new int[1000];
         for (int i = 0; i < vendors.length; i++) {
             vendors[i] = (i + 1) * 1000;
         }
-        long startTime = System.currentTimeMillis();
         assertEquals(999500500, TicketVendors.solve(vendors, 1000));
-        System.out.println((System.currentTimeMillis() - startTime));
     }
 
     @Test(timeout = 20)
@@ -58,15 +53,22 @@ public class TestTickets {
         for (int i = 0; i < vendors.length; i++) {
             vendors[i] = 1000000;
         }
-        long startTime = System.currentTimeMillis();
         assertEquals(2000000, TicketVendors.solve(vendors, 2));
-        System.out.println((System.currentTimeMillis() - startTime));
     }
 
     @Test(timeout = 20)
     public void testVendorWithHugeNumberOfTickets() {
         int[] vendors = {Integer.MAX_VALUE};
         assertEquals(Integer.MAX_VALUE, TicketVendors.solve(vendors, 1));
+    }
+
+    @Test(timeout = 400)
+    public void testVendorWithLargeNumberOfVendors() {
+        int[] vendors = new int[1000000];
+        for (int i = 0; i < vendors.length; i++) {
+            vendors[i] = 2 * i + 1;
+        }
+        assertEquals(19999962, TicketVendors.solve(vendors, 10));
     }
 
     @Test
@@ -79,7 +81,6 @@ public class TestTickets {
         }
         int k = rng.nextInt(1000);
         int expected = hiddenSolve(vendors, k);
-//        System.out.println(expected);
         assertEquals(expected, TicketVendors.solve(vendors, k));
 
     }
