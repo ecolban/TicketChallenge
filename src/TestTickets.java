@@ -23,19 +23,23 @@ public class TestTickets {
     @Test
     public void testSimpleCase() {
         int[] vendors = {3, 4, 8, 6, 8, 9};
-        assertEquals(40, TicketVendors.solve(vendors, 5));
+        int expected = 9 + 3 * 8 + 7;
+        assertEquals(expected, TicketVendors.solve(vendors, 5));
     }
 
     @Test
     public void testAnotherSimpleCase() {
         int[] vendors = {3, 4, 8, 6, 8, 9, 9, 0, 3, 4, 5};
-        assertEquals(78, TicketVendors.solve(vendors, 10));
+        int expected = 2 * 9 + 4 * 8 + 4 * 7;
+        assertEquals(expected, TicketVendors.solve(vendors, 10));
     }
 
     @Test(timeout = 20)
     public void testSeveralVendorsOneWithManyTicketsLargePurchase() {
         int[] vendors = {3, 4, 8, 6, 8, 9, 100, 0, 3, 4, 1000007, 1000, 300, 3000, 300, 40050, 60000, 6000};
-        assertEquals(1006500528, TicketVendors.solve(vendors, 1007));
+        int a = 1007;
+        int expected = a * (1000007 - a) + a * (a + 1) / 2;
+        assertEquals(expected, TicketVendors.solve(vendors, 1007));
     }
 
     @Test//(timeout = 20)
@@ -63,27 +67,43 @@ public class TestTickets {
     }
 
     @Test(timeout = 400)
-    public void testVendorWithLargeNumberOfVendors() {
+    public void testLargeNumberOfVendors() {
         int[] vendors = new int[1000000];
         for (int i = 0; i < vendors.length; i++) {
             vendors[i] = 2 * i + 1;
         }
-        assertEquals(19999962, TicketVendors.solve(vendors, 10));
+        int m = (1000000 - 1) * 2 + 1;
+        int expected = m + (m - 1) + 2 * (m - 2) + 2 * (m - 3) + 3 * (m - 4) + (m - 5);
+        shuffle(vendors);
+        assertEquals(expected, TicketVendors.solve(vendors, 10));
     }
 
-    @Test
-    public void testRandomCase() {
-
+    private void shuffle(int[] a) {
         ThreadLocalRandom rng = ThreadLocalRandom.current();
-        int[] vendors = new int[rng.nextInt(1000)];
-        for (int i = 0; i < vendors.length; i++) {
-            vendors[i] = rng.nextInt(1000);
+        for (int i = a.length - 1; i > 0; i--) {
+            int j = rng.nextInt(i + 1);
+            int tmp = a[i];
+            a[i] = a[j];
+            a[j] = tmp;
         }
-        int k = rng.nextInt(1000);
-        int expected = hiddenSolve(vendors, k);
-        assertEquals(expected, TicketVendors.solve(vendors, k));
-
     }
+
+
+//    @Test
+//    public void testRandomCases() {
+//
+//        ThreadLocalRandom rng = ThreadLocalRandom.current();
+//        for (int n = 0; n < 10; n++) {
+//            int[] vendors = new int[rng.nextInt(1000)];
+//            for (int i = 0; i < vendors.length; i++) {
+//                vendors[i] = rng.nextInt(1000);
+//            }
+//            int k = rng.nextInt(1000);
+//            int expected = hiddenSolve(vendors, k);
+//            assertEquals(expected, TicketVendors.solve(vendors, k));
+//        }
+//
+//    }
 
     private int hiddenSolve(int[] vendors, int k) {
 

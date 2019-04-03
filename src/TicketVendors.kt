@@ -34,7 +34,7 @@ object TicketVendors {
             result += maxPrice * ticketsBoughtAtMaxPrice
             ticketsYetToBuy -= ticketsBoughtAtMaxPrice
             maxPrice--
-            ticketsAtMaxPrice = (availableTicketsAtPrice[maxPrice] ?: 0) + ticketsBoughtAtMaxPrice
+            ticketsAtMaxPrice += (availableTicketsAtPrice[maxPrice] ?: 0)
         }
 
         return result
@@ -47,7 +47,7 @@ object TicketVendors {
      * since sorting is O(m log m) whereas initializing the map is O(m), where m is
      * the length of the array, but in practice sorting is much faster when the
      * vendors array size is within the limits that don't cause an OutOfMemoryError.
-     * 
+     *
      * [A possible improvement is to build a priority queue with all the
      * vendors values (which is O(n)), and pull just as many vendors out of that
      * queue to complete the purchase of k tickets. If that number is m, then
@@ -74,7 +74,7 @@ object TicketVendors {
             ticketsYetToBuy -= ticketsBoughtAtMaxPrice
             maxPrice--
             nextIdx = (idx until vendors.size).find { vendors[it] < maxPrice } ?: vendors.size
-            ticketsAtMaxPrice = nextIdx - idx + ticketsBoughtAtMaxPrice
+            ticketsAtMaxPrice += nextIdx - idx
             idx = nextIdx
         }
         println(now() - start)
@@ -84,9 +84,20 @@ object TicketVendors {
     /**
      * Similar algorithm to solve1, but instead of decrementing maxPrice in steps
      * of 1, decrements maxPrice to the next price in vendors. If vendors were
-     * provided pre-sorted, then this algorithm would have been O(min(m, k)),
+     * provided pre-sorted, then this algorithm would have been O(min(m, sqrt(k))),
      * where m is the size of the vendors array and k is the number of tickets
      * to buy.
+     *
+     * Proof of complexity:
+     * One iteration through the loop is O(1).
+     * The number of iterations through the loop is bounded by m (= vendors.size)
+     * In each iteration, the number of tickets bought increases by at least 1,
+     * so the number of iterations is bounded by the number of terms of the sum
+     * 1 + 2 + ... = k, where k = ticketsToBuy. The number of terms in this sum is
+     * O(sqrt(k)), since the sum increases quadratically as function of the number
+     * of terms. So the number of iterations is O(min(m, sqrt(k)). This also a
+     * lower bound since with input vendors = {n, n-1, n-2, ..., n-a+1, ...} and
+     * k = a*(a + 1)/2, there will be a iterations through the loop.
      */
     @JvmStatic
     fun solve(vendors: IntArray, ticketsToBuy: Int): Long {
@@ -97,10 +108,10 @@ object TicketVendors {
         var idx = 0
         var ticketsYetToBuy = ticketsToBuy
         var ticketsAtMaxPrice = 0
+        /*
+
+        */
         // vendors[idx] is the first vendor who sells for maxPrice
-        // The number of iterations through this loop is bounded by vendors.size
-        // It is also bounded by ticketsToBuy since ticketsYetToBuy is decremented
-        // in each iteration. So: O(min(m, k))
         while (ticketsYetToBuy > 0) {
             val nextIdx = (idx + 1 until vendors.size).find { vendors[it] < maxPrice } ?: vendors.size
             ticketsAtMaxPrice += nextIdx - idx
