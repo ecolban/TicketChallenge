@@ -1,3 +1,5 @@
+package com.github.ecolban.ticketchallenge;
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
@@ -100,7 +102,7 @@ public class TestTickets {
 //            }
 //            int k = rng.nextInt(1000);
 //            int expected = hiddenSolve(vendors, k);
-//            assertEquals(expected, TicketVendors.solve(vendors, k));
+//            assertEquals(expected, com.github.ecolban.ticketchallenge.TicketVendors.solve(vendors, k));
 //        }
 //
 //    }

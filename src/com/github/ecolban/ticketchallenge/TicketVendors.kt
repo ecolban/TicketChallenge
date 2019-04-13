@@ -1,3 +1,5 @@
+package com.github.ecolban.ticketchallenge
+
 import java.util.HashMap
 import kotlin.math.max
 import kotlin.math.min
