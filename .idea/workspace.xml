@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f18e3d68-34c8-468a-ab05-083d7e3b5edd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestTickets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestTickets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TicketVendors.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicketVendors.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TicketTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/github/ecolban/ticketchallenge/utils/IntHeap.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/github/ecolban/ticketchallenge/utils/IntHeap.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/github/ecolban/ticketchallenge/utils/TestIntHeap.kt" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/github/ecolban/ticketchallenge/utils/TestIntHeap.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,34 +17,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TestTickets.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TicketTest.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+            <state relative-caret-position="190">
+              <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/TicketVendors.kt">
+        <entry file="file://$PROJECT_DIR$/src/com/github/ecolban/ticketchallenge/utils/IntHeap.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-55">
-              <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#71#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1045">
+              <caret line="55" column="24" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/github/ecolban/ticketchallenge/utils/TestIntHeap.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="665">
+              <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/github/ecolban/ticketchallenge/TestTickets.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1254">
+              <caret line="72" column="39" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -54,6 +58,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
+        <option value="Kotlin Interface" />
       </list>
     </option>
   </component>
@@ -73,6 +78,9 @@
         <option value="$PROJECT_DIR$/src/TicketVendors.java" />
         <option value="$PROJECT_DIR$/src/TestTickets.java" />
         <option value="$PROJECT_DIR$/src/TicketVendors.kt" />
+        <option value="$PROJECT_DIR$/test/com/github/ecolban/ticketchallenge/utils/TestIntHeap.kt" />
+        <option value="$PROJECT_DIR$/src/com/github/ecolban/ticketchallenge/utils/Todo.kt" />
+        <option value="$PROJECT_DIR$/src/com/github/ecolban/ticketchallenge/utils/IntHeap.kt" />
       </list>
     </option>
   </component>
@@ -86,8 +94,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -99,6 +107,37 @@
               <item name="TicketTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicketChallenge" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketChallenge" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ticketchallenge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketChallenge" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ticketchallenge" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketChallenge" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketChallenge" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="ticketchallenge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketChallenge" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="ticketchallenge" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -113,12 +152,12 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553492694378" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555263992160" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -135,7 +174,69 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestTickets">
+  <component name="RunManager" selected="JUnit.TestIntHeap">
+    <configuration name="TestIntHeap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TicketTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.ecolban.ticketchallenge.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.ecolban.ticketchallenge.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.github.ecolban.ticketchallenge.utils.TestIntHeap" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestIntHeap.random test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TicketTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.ecolban.ticketchallenge.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.ecolban.ticketchallenge.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.github.ecolban.ticketchallenge.utils.TestIntHeap" />
+      <option name="METHOD_NAME" value="random test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestIntHeap.test push" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TicketTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.ecolban.ticketchallenge.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.ecolban.ticketchallenge.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.github.ecolban.ticketchallenge.utils.TestIntHeap" />
+      <option name="METHOD_NAME" value="test push" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestTickets (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TicketTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.ecolban.ticketchallenge.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.ecolban.ticketchallenge" />
+      <option name="MAIN_CLASS_NAME" value="com.github.ecolban.ticketchallenge.TestTickets" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestTickets" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TicketTest" />
       <option name="PACKAGE_NAME" value="" />
@@ -145,60 +246,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestTickets.testAnotherSimpleCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TicketTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestTickets" />
-      <option name="METHOD_NAME" value="testAnotherSimpleCase" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestTickets.testManyVendorsWithManyTicketsLargePurchase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TicketTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestTickets" />
-      <option name="METHOD_NAME" value="testManyVendorsWithManyTicketsLargePurchase" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestTickets.testSeveralVendorsOneWithManyTicketsLargePurchase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TicketTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestTickets" />
-      <option name="METHOD_NAME" value="testSeveralVendorsOneWithManyTicketsLargePurchase" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestTickets.testSimpleCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TicketTest" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestTickets" />
-      <option name="METHOD_NAME" value="testSimpleCase" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="JUnit.TestTickets" />
-      <item itemvalue="JUnit.TestTickets.testSimpleCase" />
-      <item itemvalue="JUnit.TestTickets.testAnotherSimpleCase" />
-      <item itemvalue="JUnit.TestTickets.testSeveralVendorsOneWithManyTicketsLargePurchase" />
-      <item itemvalue="JUnit.TestTickets.testManyVendorsWithManyTicketsLargePurchase" />
+      <item itemvalue="JUnit.TestIntHeap" />
+      <item itemvalue="JUnit.TestTickets (1)" />
+      <item itemvalue="JUnit.TestIntHeap.test push" />
+      <item itemvalue="JUnit.TestIntHeap.random test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestIntHeap" />
+        <item itemvalue="JUnit.TestIntHeap.random test" />
+        <item itemvalue="JUnit.TestIntHeap.test push" />
+        <item itemvalue="JUnit.TestTickets (1)" />
         <item itemvalue="JUnit.TestTickets" />
-        <item itemvalue="JUnit.TestTickets.testAnotherSimpleCase" />
-        <item itemvalue="JUnit.TestTickets.testSimpleCase" />
-        <item itemvalue="JUnit.TestTickets.testManyVendorsWithManyTicketsLargePurchase" />
-        <item itemvalue="JUnit.TestTickets.testSeveralVendorsOneWithManyTicketsLargePurchase" />
       </list>
     </recent_temporary>
   </component>
@@ -217,49 +278,83 @@
       <workItem from="1552961089142" duration="3357000" />
       <workItem from="1553144445552" duration="3472000" />
       <workItem from="1553410322978" duration="24764000" />
+      <workItem from="1555244959139" duration="7745000" />
+      <workItem from="1555261968982" duration="3081000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestTickets_testSimpleCase - 2019.03.24 at 09h 34m 52s.xml">
-      <configuration name="TestTickets.testSimpleCase" configurationId="JUnit" />
+    <history-entry file="TestIntHeap - 2019.04.14 at 07h 05m 11s.xml">
+      <configuration name="TestIntHeap" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestTickets_testSimpleCase - 2019.03.24 at 09h 35m 38s.xml">
-      <configuration name="TestTickets.testSimpleCase" configurationId="JUnit" />
+    <history-entry file="TestIntHeap - 2019.04.14 at 07h 07m 46s.xml">
+      <configuration name="TestIntHeap" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestTickets_testSimpleCase - 2019.03.24 at 09h 36m 39s.xml">
-      <configuration name="TestTickets.testSimpleCase" configurationId="JUnit" />
+    <history-entry file="TestIntHeap_random_test - 2019.04.14 at 09h 08m 21s.xml">
+      <configuration name="TestIntHeap.random test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestTickets - 2019.03.24 at 09h 36m 47s.xml">
-      <configuration name="TestTickets" configurationId="JUnit" />
+    <history-entry file="TestIntHeap - 2019.04.14 at 09h 08m 32s.xml">
+      <configuration name="TestIntHeap" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestTickets_testAnotherSimpleCase - 2019.03.24 at 09h 40m 05s.xml">
-      <configuration name="TestTickets.testAnotherSimpleCase" configurationId="JUnit" />
+    <history-entry file="TestIntHeap_random_test - 2019.04.14 at 09h 09m 50s.xml">
+      <configuration name="TestIntHeap.random test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestTickets_testAnotherSimpleCase - 2019.03.24 at 09h 40m 10s.xml">
-      <configuration name="TestTickets.testAnotherSimpleCase" configurationId="JUnit" />
+    <history-entry file="TestIntHeap - 2019.04.14 at 09h 10m 05s.xml">
+      <configuration name="TestIntHeap" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestTickets - 2019.03.24 at 09h 40m 20s.xml">
-      <configuration name="TestTickets" configurationId="JUnit" />
+    <history-entry file="TestIntHeap - 2019.04.14 at 09h 10m 11s.xml">
+      <configuration name="TestIntHeap" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestTickets - 2019.03.24 at 22h 41m 30s.xml">
-      <configuration name="TestTickets" configurationId="JUnit" />
+    <history-entry file="TestIntHeap - 2019.04.14 at 09h 10m 56s.xml">
+      <configuration name="TestIntHeap" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestTickets - 2019.03.24 at 22h 44m 47s.xml">
-      <configuration name="TestTickets" configurationId="JUnit" />
+    <history-entry file="TestIntHeap - 2019.04.14 at 09h 11m 24s.xml">
+      <configuration name="TestIntHeap" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestTickets - 2019.03.24 at 22h 44m 58s.xml">
-      <configuration name="TestTickets" configurationId="JUnit" />
+    <history-entry file="TestIntHeap - 2019.04.14 at 09h 58m 05s.xml">
+      <configuration name="TestIntHeap" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46399000" />
+    <option name="totallyTimeSpent" value="57225000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25767368" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.26171243" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.24959612" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.329927" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4948905" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.329927" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="SciView" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26171243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -289,7 +384,7 @@
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -298,10 +393,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/TicketVendors.kt</url>
-          <line>15</line>
-          <properties />
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/test/com/github/ecolban/ticketchallenge/utils/TestIntHeap.kt</url>
+          <line>51</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -321,7 +418,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TicketVendors.kt" />
     <entry file="file://$PROJECT_DIR$/.classpath">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -335,30 +431,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestTickets.java">
+    <entry file="file://$PROJECT_DIR$/src/TestTickets.java" />
+    <entry file="file://$PROJECT_DIR$/src/TicketVendors.kt" />
+    <entry file="jar://$PROJECT_DIR$/lib/kotlin-stdlib-sources.jar!/kotlin/Ranges.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="211">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/kotlin-stdlib-sources.jar!/kotlin/Progressions.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/kotlin-stdlib-sources.jar!/common/generated/_Ranges.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="438" column="34" selection-start-line="438" selection-start-column="34" selection-end-line="438" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/kotlin-stdlib-sources.jar!/common/kotlin/collections/Sequence.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/kotlin-stdlib-sources.jar!/common/kotlin/collections/Sequences.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="537" column="123" selection-start-line="537" selection-start-column="123" selection-end-line="537" selection-end-column="123" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TicketTest.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+        <state relative-caret-position="190">
+          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TicketVendors.kt">
+    <entry file="file://$PROJECT_DIR$/test/com/github/ecolban/ticketchallenge/TestTickets.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-55">
-          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#71#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1254">
+          <caret line="72" column="39" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/github/ecolban/ticketchallenge/utils/TestIntHeap.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/github/ecolban/ticketchallenge/utils/Todo.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/github/ecolban/ticketchallenge/utils/IntHeap.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="55" column="24" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -391,7 +532,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Python 3.7 (BQ) interpreter library</last-edited>
+          <last-edited>Pipenv (AWSPOC) interpreter library</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -440,6 +581,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>KotlinJavaRuntime</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

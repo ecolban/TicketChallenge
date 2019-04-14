@@ -82,7 +82,7 @@ object TicketVendors {
     fun solve(vendors: IntArray, ticketsToBuy: Int): Long {
         val vendorHeap = IntHeap(vendors)
         var result: Long = 0
-        var maxPrice = vendorHeap.peek() ?: 0
+        var maxPrice = vendorHeap.peek()
         var ticketsYetToBuy = ticketsToBuy
         var ticketsAtMaxPrice = 0
         while (ticketsYetToBuy > 0) {
@@ -90,7 +90,7 @@ object TicketVendors {
                 vendorHeap.pop()
                 ticketsAtMaxPrice++
             }
-            val nextPrice = vendorHeap.peek() ?: 0
+            val nextPrice = vendorHeap.peek()
             val ticketsAtMoreThanNextPrice = (maxPrice - nextPrice) * ticketsAtMaxPrice
             if (ticketsAtMoreThanNextPrice < ticketsYetToBuy) {
                 val q = maxPrice - nextPrice
