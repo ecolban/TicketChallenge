@@ -1,5 +1,6 @@
 package com.github.ecolban.ticketchallenge
 
+import com.github.ecolban.ticketchallenge.utils.IntHeap
 import java.util.HashMap
 import kotlin.math.max
 import kotlin.math.min
@@ -19,7 +20,6 @@ object TicketVendors {
      */
     @JvmStatic
     fun solve0(vendors: IntArray, ticketsToBuy: Int): Int {
-
         val availableTicketsAtPrice = HashMap<Int, Int>()
         var maxPrice = 0
         for (i in vendors) {
@@ -38,7 +38,6 @@ object TicketVendors {
             maxPrice--
             ticketsAtMaxPrice += (availableTicketsAtPrice[maxPrice] ?: 0)
         }
-
         return result
     }
 
@@ -49,17 +48,9 @@ object TicketVendors {
      * since sorting is O(m log m) whereas initializing the map is O(m), where m is
      * the length of the array, but in practice sorting is much faster when the
      * vendors array size is within the limits that don't cause an OutOfMemoryError.
-     *
-     * [A possible improvement is to build a priority queue with all the
-     * vendors values (which is O(n)), and pull just as many vendors out of that
-     * queue to complete the purchase of k tickets. If that number is m, then
-     * pulling m values from the queue is O(m log(n)), ... but I don't really
-     * believe this will improve the time in practice for the sizes that don't
-     * result in OutOfMemoryErrors]
      */
     @JvmStatic
     fun solve1(vendors: IntArray, ticketsToBuy: Int): Long {
-        val start = now()
         vendors.sortDescending()
         var result: Long = 0
         var maxPrice = vendors[0]
@@ -79,51 +70,32 @@ object TicketVendors {
             ticketsAtMaxPrice += nextIdx - idx
             idx = nextIdx
         }
-        println(now() - start)
         return result
     }
 
     /**
      * Similar algorithm to solve1, but instead of decrementing maxPrice in steps
-     * of 1, decrements maxPrice to the next price in vendors. If vendors were
-     * provided pre-sorted, then this algorithm would have been O(min(m, sqrt(k))),
-     * where m is the size of the vendors array and k is the number of tickets
-     * to buy.
-     *
-     * Proof of complexity:
-     * One iteration through the loop is O(1).
-     * The number of iterations through the loop is bounded by m (= vendors.size)
-     * In each iteration, the number of tickets bought increases by at least 1,
-     * so the number of iterations is bounded by the number of terms of the sum
-     * 1 + 2 + ... = k, where k = ticketsToBuy. The number of terms in this sum is
-     * O(sqrt(k)), since the sum increases quadratically as function of the number
-     * of terms. So the number of iterations is O(min(m, sqrt(k)). This also a
-     * lower bound since with input vendors = {n, n-1, n-2, ..., n-a+1, ...} and
-     * k = a*(a + 1)/2, there will be a iterations through the loop.
+     * of 1, decrements maxPrice to the next price in vendors. Instead of sorting the
+     * vendors array, a heap is used.
      */
     @JvmStatic
     fun solve(vendors: IntArray, ticketsToBuy: Int): Long {
-        val start = now()
-        vendors.sortDescending()
+        val vendorHeap = IntHeap(vendors)
         var result: Long = 0
-        var maxPrice = vendors[0]
-        var idx = 0
+        var maxPrice = vendorHeap.peek() ?: 0
         var ticketsYetToBuy = ticketsToBuy
         var ticketsAtMaxPrice = 0
-        /*
-
-        */
-        // vendors[idx] is the first vendor who sells for maxPrice
         while (ticketsYetToBuy > 0) {
-            val nextIdx = (idx + 1 until vendors.size).find { vendors[it] < maxPrice } ?: vendors.size
-            ticketsAtMaxPrice += nextIdx - idx
-            val nextPrice = if (nextIdx < vendors.size) vendors[nextIdx] else 0
+            while (vendorHeap.peek() == maxPrice) {
+                vendorHeap.pop()
+                ticketsAtMaxPrice++
+            }
+            val nextPrice = vendorHeap.peek() ?: 0
             val ticketsAtMoreThanNextPrice = (maxPrice - nextPrice) * ticketsAtMaxPrice
             if (ticketsAtMoreThanNextPrice < ticketsYetToBuy) {
                 val q = maxPrice - nextPrice
                 result += ticketsAtMaxPrice * (q * nextPrice + q * (q + 1) / 2)
                 ticketsYetToBuy -= ticketsAtMoreThanNextPrice
-                idx = nextIdx
                 maxPrice = nextPrice
             } else {
                 val q = ticketsYetToBuy / ticketsAtMaxPrice
@@ -133,7 +105,6 @@ object TicketVendors {
                 ticketsYetToBuy = 0
             }
         }
-        println(now() - start)
         return result
     }
 

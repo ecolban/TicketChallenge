@@ -44,7 +44,7 @@ public class TestTickets {
         assertEquals(expected, TicketVendors.solve(vendors, 1007));
     }
 
-    @Test//(timeout = 20)
+    @Test(timeout = 20)
     public void testManyVendorsWithManyTicketsLargePurchase() {
         int[] vendors = new int[1000];
         for (int i = 0; i < vendors.length; i++) {
@@ -91,24 +91,23 @@ public class TestTickets {
     }
 
 
-//    @Test
-//    public void testRandomCases() {
-//
-//        ThreadLocalRandom rng = ThreadLocalRandom.current();
-//        for (int n = 0; n < 10; n++) {
-//            int[] vendors = new int[rng.nextInt(1000)];
-//            for (int i = 0; i < vendors.length; i++) {
-//                vendors[i] = rng.nextInt(1000);
-//            }
-//            int k = rng.nextInt(1000);
-//            int expected = hiddenSolve(vendors, k);
-//            assertEquals(expected, com.github.ecolban.ticketchallenge.TicketVendors.solve(vendors, k));
-//        }
-//
-//    }
+    @Test
+    public void testRandomCases() {
+
+        ThreadLocalRandom rng = ThreadLocalRandom.current();
+        for (int n = 0; n < 10; n++) {
+            int[] vendors = new int[rng.nextInt(1000)];
+            for (int i = 0; i < vendors.length; i++) {
+                vendors[i] = rng.nextInt(1000);
+            }
+            int k = rng.nextInt(1000);
+            int expected = hiddenSolve(vendors, k);
+            assertEquals(expected, TicketVendors.solve(vendors, k));
+        }
+
+    }
 
     private int hiddenSolve(int[] vendors, int k) {
-
         Map<Integer, Integer> quants = new HashMap<>();
         int max = 0;
         for (int i : vendors) {
@@ -125,7 +124,6 @@ public class TestTickets {
             result += max;
             if (valueAfterUpdate == 0) max--;
         }
-
         return result;
     }
 }
