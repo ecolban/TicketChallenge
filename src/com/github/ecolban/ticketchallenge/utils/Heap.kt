@@ -1,33 +1,25 @@
 package com.github.ecolban.ticketchallenge.utils
 
-import java.lang.IllegalArgumentException
+class Heap<T : Comparable<T>>(elements: Collection<T>) {
 
+    constructor(): this(listOf<T>())
 
-class IntHeap(private val array: IntArray, private var last: Int = array.size - 1) {
-
-    constructor(capacity: Int) : this(IntArray(capacity), last = -1)
+    private var array = elements.toMutableList()
+    private var last = array.size - 1
 
     init {
-        if (last < -1 || array.size <= last) {
-            throw IllegalArgumentException("array cannot be under-empty or over-full.")
-        }
         for (i in (last - 1) / 2 downTo 0) sinkIt(array[i], i)
     }
 
     val isEmpty: Boolean
         get() = last < 0
 
-    val isFull: Boolean
-        get() = last == array.size - 1
-
-    fun push(element: Int) = if (last >= array.size - 1) {
-        throw IllegalStateException("Heap is full.")
-    } else {
+    fun push(element: T)  {
+        array.add(element)
         floatIt(element, ++last)
     }
 
-
-    fun pop(): Int = if (isEmpty) {
+    fun pop(): T = if (isEmpty) {
         throw IllegalStateException("Heap is empty.")
     } else {
         val result = array[0]
@@ -35,9 +27,9 @@ class IntHeap(private val array: IntArray, private var last: Int = array.size - 
         result
     }
 
-    fun peek(): Int = if (isEmpty) throw IllegalStateException("Heap is empty.") else array[0]
+    fun peek(): T = if (isEmpty) throw IllegalStateException("Heap is empty.") else array[0]
 
-    private tailrec fun floatIt(element: Int, index: Int) {
+    private tailrec fun floatIt(element: T, index: Int): Unit {
         if (index == 0) {
             array[0] = element
             return
@@ -51,7 +43,7 @@ class IntHeap(private val array: IntArray, private var last: Int = array.size - 
         }
     }
 
-    private tailrec fun sinkIt(element: Int, index: Int): Unit {
+    private tailrec fun sinkIt(element: T, index: Int): Unit {
         val left = 2 * index + 1
         if (left > last) {
             array[index] = element
@@ -66,4 +58,5 @@ class IntHeap(private val array: IntArray, private var last: Int = array.size - 
             array[index] = element
         }
     }
+
 }

@@ -1,7 +1,6 @@
 package com.github.ecolban.ticketchallenge.utils
 
 import org.junit.Test
-import java.lang.IllegalStateException
 import kotlin.random.Random
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
@@ -13,7 +12,21 @@ class TestIntHeap {
 
         val testArray = intArrayOf(8, 3, 9, 6, 2, 1, 9, 4, 3)
         val heap = IntHeap(testArray)
+        assertTrue(heap.isFull)
         assertEquals(testArray.max(), heap.peek())
+    }
+
+    @Test
+    fun `test constructor 2`() {
+        val heap = IntHeap(0)
+        assertTrue(heap.isEmpty)
+        assertTrue(heap.isFull)
+    }
+
+    @Test
+    fun `test constructor 3`() {
+        val heap = IntHeap(10)
+        assertTrue(heap.isEmpty)
     }
 
     @Test
